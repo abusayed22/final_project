@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                #result{
+                        width: 98%;
+                        background-color: darkgray;
+                        color: #fff;
+                        outline: none;
+                        text-align: center;
+                        height: 36px;
+                        font-size: large;
+                        border: none;
+                }
+                #t_h{
+                }
+                #t_b{
+                }
+                #clr{
+                        width: 100%;
+                        background: #a8c0ff;  /* fallback for old browsers */
+                        background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+                        background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                        height: 40px;
+                        color: #fff;
+                        border: none;
+                }
+                #valupass{
+                        color: #fff;
+                        width: 100%;
+                        background: #bdc3c7;  /* fallback for old browsers */
+                        background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+                        background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                        height: 36px;
+                        border: none;
+                }
+                #com{
+                        width: 100%;
+                }
+                .soman{
+                        background-color: rebeccapurple !important;
+                }
+                #main{
+                        width: 450px;
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+                }
+        </style>
+</head>
+<body>
+        <center>
+                <div id="main">
+                        <table style="width: 400px;margin-top: 150px;padding: 10px;">
+                                <tr>
+                                        <th id="t_h" colspan="3" >
+                                                <input type="text" id="result" value="">
+                                        </th>
+                                        <th id="t_h">
+                                                <input type="button" value="clr" id="clr" onclick="clr()" >
+                                        </th>
+                                </tr>
+                                <tr>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="1" onclick="valupass(value)">
+                                        </td>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="2" onclick="valupass(value)">
+                                        </td>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="3" onclick="valupass(value)">
+                                        </td>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="+" onclick="valupass(value)">
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="4" onclick="valupass(value)">
+                                        </td>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="5" onclick="valupass(value)">
+                                        </td>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="6" onclick="valupass(value)">
+                                        </td>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="-" onclick="valupass(value)" >
+                                </tr>
+                                <tr>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="7" onclick="valupass(value)">
+                                        </td>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="8" onclick="valupass(value)">
+                                        </td>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="9" onclick="valupass(value)">
+                                        </td>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="*" onclick="valupass(value)">
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="0" onclick="valupass(value)">
+                                        </td>
+                                        <td colspan="2" id="t_b">
+                                                <input class="soman" type="button" id="valupass" value="=" onclick="com()">
+                                        </td>
+                                       
+                                        <td id="t_b">
+                                                <input type="button" id="valupass" value="/" onclick="valupass(value)">
+                                        </td>
+                                </tr>
+                        </table>
+                </div>
+        </center>
+
+
+
+
+        <script>
+
+                valupass = (value) => {
+                        document.querySelector('#result').value += value;
+                }
+
+                clr = () => {
+                        document.querySelector('#result').value = "";
+                }
+                com = () => {
+                        document.querySelector('#result').value = eval(document.querySelector('#result').value)
+                }
+        </script>
+</body>
+</html>
